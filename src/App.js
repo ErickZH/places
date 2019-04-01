@@ -5,14 +5,49 @@ import './App.css';
 import Title from './components/Title'
 
 class App extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            numero: 0,
+        };
+    }
+
+    updateNumero() {
+        this.setState({
+            numero: this.state.numero + 1
+        })
+    }
+
     render() {
         return (
-            <div className="App">
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <Title></Title>
-                </header>
-            </div>
+            <section>
+                <div>
+                    <div>
+                        <Title></Title>
+                        <h2>{this.state.numero}</h2>
+                        <button onClick={ () => { this.updateNumero() } }>Crear cuenta</button>
+                        <img src={process.env.PUBLIC_URL + '/images/place.png'}/>
+                        <div>
+                            <ul>
+                                <li>
+                                    <h3>Calificaciones con emociones.</h3>
+                                    <p>Califica tus lugares con experiencias, no con números.</p>
+                                </li>
+                                <li>
+                                    <h3>Funcionamos sin internet</h3>
+                                    <p>Somo la primer App Offline.</p>
+                                </li>
+                                <li>
+                                    <h3>Tus lugares favositos</h3>
+                                    <p>Agrega tus lugares favoritos, para visitar.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
         );
     }
 }
