@@ -12,6 +12,8 @@ class App extends Component {
         this.state = {
             numero: 0,
         };
+
+        this.updateNumero = this.updateNumero.bind(this);
     }
 
     updateNumero() {
@@ -24,10 +26,10 @@ class App extends Component {
         return (
             <section>
                 <div>
-                    <div>
+                    <div style={{"width":"80%", "margin":"0 auto"}}>
                         <Title></Title>
                         <h2>{this.state.numero}</h2>
-                        <button onClick={ () => { this.updateNumero() } }>Crear cuenta</button>
+                        <button onClick={ this.updateNumero }>Crear cuenta</button>
                         <img src={process.env.PUBLIC_URL + '/images/place.png'}/>
                         <div>
                             <ul>
