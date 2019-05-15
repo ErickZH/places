@@ -5,32 +5,15 @@ import './App.css';
 import Title from './components/Title'
 
 class App extends Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            numero: 0,
-        };
-
-        this.updateNumero = this.updateNumero.bind(this);
-    }
-
-    updateNumero() {
-        this.setState({
-            numero: this.state.numero + 1
-        })
-    }
-
     render() {
         return (
             <section>
-                <div>
+                <div className="Header-background">
                     <div style={{"width":"80%", "margin":"0 auto"}}>
-                        <Title></Title>
-                        <h2>{this.state.numero}</h2>
-                        <button onClick={ this.updateNumero }>Crear cuenta</button>
-                        <img src={process.env.PUBLIC_URL + '/images/place.png'}/>
+                        <div className="Header-main">
+                            <Title></Title>
+                            <img src={process.env.PUBLIC_URL + '/images/place.png'} className="Header-ilustration"/>
+                        </div>
                         <div>
                             <ul>
                                 <li>
