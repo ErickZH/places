@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import RaisedButton from 'material-ui/RaisedButton'
+
 import './App.css';
 
 import Title from './components/Title'
@@ -7,11 +9,12 @@ import Title from './components/Title'
 class App extends Component {
     render() {
         return (
-            <section>
+            <MuiThemeProvider>
                 <div className="Header-background">
                     <div style={{"width":"80%", "margin":"0 auto"}}>
                         <div className="Header-main">
                             <Title></Title>
+                            <RaisedButton label="Crear cuenta" primary={true}/>
                             <img src={process.env.PUBLIC_URL + '/images/place.png'} className="Header-ilustration"/>
                         </div>
                         <div>
@@ -32,7 +35,7 @@ class App extends Component {
                         </div>
                     </div>
                 </div>
-            </section>
+            </MuiThemeProvider>
         );
     }
 }
