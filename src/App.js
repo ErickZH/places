@@ -4,6 +4,8 @@ import RaisedButton from 'material-ui/RaisedButton'
 
 import './App.css';
 
+import indigo400 from 'material-ui/styles/colors';
+
 import Title from './components/Title'
 
 class App extends Component {
@@ -17,23 +19,23 @@ class App extends Component {
                             <RaisedButton label="Crear cuenta" primary={true}/>
                             <img src={process.env.PUBLIC_URL + '/images/place.png'} className="Header-ilustration"/>
                         </div>
-                        <div>
-                            <ul>
-                                <li>
-                                    <h3>Calificaciones con emociones.</h3>
-                                    <p>Califica tus lugares con experiencias, no con números.</p>
-                                </li>
-                                <li>
-                                    <h3>Funcionamos sin internet</h3>
-                                    <p>Somo la primer App Offline.</p>
-                                </li>
-                                <li>
-                                    <h3>Tus lugares favositos</h3>
-                                    <p>Agrega tus lugares favoritos, para visitar.</p>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
+                </div>
+                <div style={{'background-color': indigo400, 'padding': '50px'}}>
+                    <ul>
+                        <li>
+                            <h3>Calificaciones con emociones.</h3>
+                            <p>Califica tus lugares con experiencias, no con números.</p>
+                        </li>
+                        <li>
+                            <h3>Funcionamos sin internet</h3>
+                            <p>Somo la primer App Offline.</p>
+                        </li>
+                        <li>
+                            <h3>Tus lugares favositos</h3>
+                            <p>Agrega tus lugares favoritos, para visitar.</p>
+                        </li>
+                    </ul>
                 </div>
             </MuiThemeProvider>
         );
